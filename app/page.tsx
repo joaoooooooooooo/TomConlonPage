@@ -4,14 +4,17 @@ const observations = [
   {
     title: "AI Didn't Kill SEO",
     text: "It exposed it. The blank page won't last.",
+    image: "/Ai didnt killed.png",
   },
   {
     title: "We Traded Accountability for Iteration",
     text: "Information is everywhere. Interpretation isn't.",
+    image: "/We traded.png",
   },
   {
     title: "Piercing the Veil",
     text: "How did AI lose your trust today?",
+    image: "/Piericing the veil.png",
   },
 ];
 
@@ -148,9 +151,10 @@ export default function Home() {
         <div className="shell about-simple">
           <div className="about-heading-stack">
             <h2 className="section-title">About Tom Conlon</h2>
-            <a className="secondary-btn" href="/tom-conlon-bio-info.txt" download>
-              Download bio info
-            </a>
+            <p className="about-intro">
+              Download approved media assets and copy-ready background materials for interviews, features, and event
+              listings.
+            </p>
           </div>
 
           <div className="about-body">
@@ -164,18 +168,25 @@ export default function Home() {
                     broader market signals, then translates them into a weekly read on what changed, why it matters,
                     and what to do next.
                   </p>
-                  <p>
-                    Tom has spent more than 15 years building businesses at the intersection of marketing and
-                    technology. He founded brand and strategy agency North Street in 2010 and later launched Circulant,
-                    a specialized digital operation focused on fast-turn influence and advocacy work.
-                  </p>
-                  <p>
-                    Before becoming an entrepreneur, Tom worked as a technology journalist, writing for publications
-                    including <em>Wired</em>, <em>Popular Science</em>, <em>Boston</em>, and <em>Men&apos;s Journal</em>.
-                    His work gives him a practitioner&apos;s view of how AI, technology, and changing consumer behavior are
-                    reshaping marketing, search, media, and the agency business.
-                  </p>
                 </div>
+              </div>
+            </div>
+
+            <div className="media-resource-actions">
+              <h3 className="media-resource-title">Downloadable resources</h3>
+              <div className="media-resource-buttons">
+                <a className="secondary-btn" href="/034497b8-a4d1-4672-8aba-295144e5da30.png" download>
+                  Hi-res headshot
+                </a>
+                <a className="secondary-btn" href="/tom-conlon-one-line-credential.txt" download>
+                  One-line credential
+                </a>
+                <a className="secondary-btn" href="/tom-conlon-short-bio.txt" download>
+                  Short bio
+                </a>
+                <a className="secondary-btn" href="/tom-conlon-long-bio.txt" download>
+                  Long bio
+                </a>
               </div>
             </div>
           </div>
@@ -188,6 +199,14 @@ export default function Home() {
           <div className="observation-grid">
             {observations.map((observation) => (
               <a key={observation.title} className="quiet-card quiet-card-link" href="#">
+                <Image
+                  className="quiet-card-image"
+                  src={observation.image}
+                  alt=""
+                  aria-hidden="true"
+                  width={1456}
+                  height={1048}
+                />
                 <div className="quiet-card__body">
                   <h3>
                     <span className="quiet-card-title">{observation.title}</span>
